@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>College Attendance System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --primary: #1a3360;
+    --secondary: #f7ecec;
+    --bg: #050505;
+    --dark: #1f2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background:white;
+    color: var(--dark);
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+    background: #0e0a3d;
+    padding: 15px 40px;
+    display: flex;
+    
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(231, 227, 227, 0.923);
+}
+
+nav h1 {
+    color:rgb(216, 214, 214);
+    padding: 0px 20px;
+    text-align: left;
+    
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav button {
+    background: var(--primary);
+    color: rgb(241, 238, 238);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav button:hover {
+    background: var(--secondary);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.hero-text button {
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: var(--primary);
+    color: rgb(8, 8, 8);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background: var(--secondary);
+}
+
+.hero img {
+    width: 420px;
+}
+
+/* ---------- FEATURES ---------- */
+.features {
+    padding: 60px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+}
+
+.feature-box h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+/* ---------- LOGIN MODAL ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px;
+    width: 350px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    width: 95%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 15px;
+
+}
+
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+.deogiri{
+    margin-left: auto;
+    justify-content: space-evenly;
+    color: #fcf6f6;
+}
+.college{
+    display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 50px;
+      color:rgb(216, 214, 214);
+      background:#0e0a3d ;
+       border-radius: 10px;
+     box-shadow: 0px 4px 8px rgba(170, 170, 175, 0.1);
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+     <img src="download.jpg"height ="60px",widght="60px" alt="Students">
+    <h1> Deogirian's Attendance</h1>
+    
+<div class="deogiri">
+    <a href="index.html"><button>Home</button></a>
+    <a href="clg.html"> <button>login</button> </a>
+    <a href="aboutus.html"><button>About us</button> </a>
+    
+
+      <a href="contactus.html"><button>  Contact Us</button></a>
+       </div>
+      
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h5>मराठवाडा शिक्षण प्रसारक मंडळाद्वारे संचलित </h5>
+        <h2>देवगिरी महाविद्यालय, छत्रपती संभाजीनगर</h2>
+        <p>
+            Accredited with 'A++' Grade by NAAC and ISO 21001:2018 Certified
+            College With Potential For Excellence<br>
+           <strong> उत्कृष्ट शैक्षणिक संस्था पुरस्कार – २००१<br>
+आदर्श परीक्षा केंद्र पुरस्कार – २००९, २०१२, २०१७<br>
+जागर जाणीवांचा महाराष्ट्र शासन पुरस्कार – २०१३</strong>
+
+        </p>
+        <br><br>
+    </div>
+    <img src="clg.jfif"height ="350px",widght="1000px" alt="Students">
+</section>
+<div class="college">
+       <center> <h1> WELCOME TO DEOGIRIAN'S CAMPUS</h1></center>
+</div>
+<!-- FEATURES -->
+<section class="features">
+    <div class="feature-box">
+        <h3>✔ Role-Based Access</h3>
+        <p>Separate dashboards for Admin, Teacher and Student.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>✔ Daily Attendance</h3>
+        <p>Mark Present, Absent or Late in real time.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>✔ Deogiri Reports</h3>
+        <p>Automatic percentage calculation and defaulter list.</p>
+    </div>
+</section>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+        <h2>Teacher Login</h2>
+        <input type="text" id="username" placeholder="Email / Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="msg"></p>
+    </div>
+</div>
+
+<script>
+function openLogin() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+
+function closeLogin() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+    let msg = document.getElementById("msg");
+
+    if (user === "teacher" && pass === "1234") {
+        msg.style.color = "green";
+        msg.innerHTML = "Login Successful ✔";
+        setTimeout(() => {
+            alert("Redirecting to Teacher Dashboard...");
+        }, 1000);
+    } else {
+        msg.style.color = "red";
+        msg.innerHTML = "Invalid Login Credentials ❌";
+    }
+}
+</script>
+
+</body>
+<!-- College Website Footer -->
+<footer style="background-color: #04396b; color: #f1f1f1; padding: 50px 20px; font-family: Arial, sans-serif;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+    <!-- About Us -->
+    <div style="flex: 1 1 250px; margin-bottom: 30px;">
+      <h3 style="color: #fff; margin-bottom: 15px;">About Us</h3>
+      <p>Deogiri College,chh Sambhajinagar is committed to excellence in education, research, and community engagement. We empower students to achieve their academic and personal goals in a supportive, inclusive environment.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 200px; margin-bottom: 30px;">
+      <h3 style="color: #fff; margin-bottom: 15px;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0; line-height: 2;">
+        <li><a href="#" style="color: #f1f1f1; text-decoration: none;">Admissions</a></li>
+        <li><a href="#" style="color: #f1f1f1; text-decoration: none;">Academics</a></li>
+        <li><a href="#" style="color: #f1f1f1; text-decoration: none;">Departments</a></li>
+        <li><a href="#" style="color: #f1f1f1; text-decoration: none;">Research</a></li>
+        <li><a href="#" style="color: #f1f1f1; text-decoration: none;">Campus Life</a></li>
+        <li><a href="#" style="color: #f1f1f1; text-decoration: none;">Alumni</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 250px; margin-bottom: 30px;">
+      <h3 style="color: #fff; margin-bottom: 15px;">Contact Us</h3>
+      <p>📍 Deogiri College,chh Sambhajinagar maharashtra 431005</p>
+      <p>📞 (123) 456-7890</p>
+      <p>✉ <a href="principal@deogiricollege.org" style="color: #f1f1f1; text-decoration: none;">info@college.edu</a></p>
+    </div>
+
+    <!-- Social Media -->
+   
+
+  
+
+  <!-- Legal & Copyright -->
+  <div style="border-top: 1px solid #444; margin-top: 30px; padding-top: 20px; text-align: center; font-size: 14px;">
+    <p>
+      <a href="#" style="color: #f1f1f1; text-decoration: none; margin-right: 15px;">Privacy Policy</a> |
+      <a href="#" style="color: #f1f1f1; text-decoration: none; margin-left: 15px;">Terms of Use</a> |
+      <a href="#" style="color: #f1f1f1; text-decoration: none; margin-left: 15px;">Accessibility</a>
+    </p>
+    <p>© 2026 Deogiri College Chatrapati Sambhajinagar. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+</html>
+
